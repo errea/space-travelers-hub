@@ -1,6 +1,7 @@
 import { BrowserRouter, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Rockets from './components/Rockets';
+import Missions from './components/Missions';
 
 const App = () => (
   <BrowserRouter>
@@ -8,6 +9,9 @@ const App = () => (
     <main>
       <Route exact path="/">
         <Rockets />
+      </Route>
+      <Route path="/missions">
+        <Missions />
       </Route>
     </main>
   </BrowserRouter>
