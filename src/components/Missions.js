@@ -15,20 +15,24 @@ const Mission = () => {
 
   return (
     <table>
-      <tr>
-        <th>Mission</th>
-        <th>Descriptions</th>
-        <th>Status</th>
-        <th>{String.fromCharCode(8194)}</th>
-      </tr>
-      {missionData.map((data) => (
-        <MissionsItem
-          key={data.mission_id}
-          id={data.mission_id}
-          name={data.mission_name}
-          description={data.description}
-        />
-      ))}
+      <thead>
+        <tr>
+          <th>Mission</th>
+          <th>Descriptions</th>
+          <th>Status</th>
+          <th>{String.fromCharCode(8194)}</th>
+        </tr>
+      </thead>
+      <tbody>
+        {missionData.map((data) => (
+          <MissionsItem
+            key={data.mission_id}
+            id={data.mission_id}
+            name={data.mission_name}
+            description={data.description}
+          />
+        ))}
+      </tbody>
     </table>
   );
 };
