@@ -1,5 +1,11 @@
 const RocketItem = (prop) => {
-  const { name, description, image } = prop;
+  const {
+    reserveRocketHandler,
+    id,
+    name,
+    description,
+    image,
+  } = prop;
 
   return (
     <li>
@@ -7,7 +13,9 @@ const RocketItem = (prop) => {
       <div className="rocket-info">
         <h2>{name}</h2>
         <p>{description}</p>
-        <button type="button">Reserve Rocket</button>
+        <button type="button" onClick={() => reserveRocketHandler(id)}>
+          Reserve Rocket
+        </button>
       </div>
     </li>
   );
