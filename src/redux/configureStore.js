@@ -2,7 +2,6 @@ import {
   createStore, combineReducers, compose, applyMiddleware,
 } from 'redux';
 import logger from 'redux-logger';
-import thunk from 'redux-thunk';
 import { missionsReducer, getMissionsMiddleware, updateMissionStateMiddleware } from './missions/missions';
 
 const rootReducer = combineReducers({
@@ -15,6 +14,6 @@ const composedEnhancer = compose(
   applyMiddleware(logger),
 );
 
-const store = createStore(rootReducer, applyMiddleware(logger, thunk), composedEnhancer);
+const store = createStore(rootReducer, composedEnhancer);
 
 export default store;
