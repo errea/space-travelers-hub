@@ -1,4 +1,6 @@
-import { createStore, combineReducers, applyMiddleware } from 'redux';
+import {
+  createStore, combineReducers, compose, applyMiddleware,
+} from 'redux';
 import logger from 'redux-logger';
 import thunk from 'redux-thunk';
 import { missionsReducer, getMissionsMiddleware, updateMissionStateMiddleware } from './missions/missions';
