@@ -1,16 +1,16 @@
-import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
+import { useEffect } from 'react';
 import { getRockets } from '../redux/rockets/rockets';
 
 const Rockets = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getRockets);
+    dispatch(getRockets());
   });
 
   return (
-    <h1>SPACE</h1>
+    <h1>Space Travelers Hub</h1>
   );
 };
 

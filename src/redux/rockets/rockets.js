@@ -1,6 +1,6 @@
 import spaceXAPI from '../../api/spaceXAPI';
 
-const GET_ROCKETS = 'spacex/rockets/GET_ROCKETS';
+const GET_ROCKETS = 'spaceX/rockets/GET_ROCKETS';
 
 const initialState = [];
 
