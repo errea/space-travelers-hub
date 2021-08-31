@@ -6,6 +6,7 @@ const RocketItem = (prop) => {
     name,
     description,
     image,
+    reserved,
   } = prop;
 
   return (
@@ -13,7 +14,10 @@ const RocketItem = (prop) => {
       <img src={image} alt="Rocket" />
       <div className="rocket-info">
         <h2>{name}</h2>
-        <p>{description}</p>
+        <p>
+          {reserved && (<span className="reserved-badge">Reserved</span>)}
+          {description}
+        </p>
         <button type="button" onClick={() => reserveRocketHandler(id)}>
           Reserve Rocket
         </button>

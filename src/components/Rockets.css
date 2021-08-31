@@ -24,9 +24,18 @@
   margin-bottom: 9px;
 }
 
+.reserved-badge {
+  border-radius: 3px;
+  background: #18a2b8;
+  color: #fff;
+  font-weight: 700;
+  padding: 3px;
+  margin-right: 6px;
+}
+
 .rocket-info p {
   font-size: 1.2rem;
-  line-height: 1.8rem;
+  line-height: 2rem;
   margin-bottom: 9px;
 }
 

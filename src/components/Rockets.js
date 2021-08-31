@@ -34,6 +34,7 @@ const Rockets = () => {
           name={rocket.name}
           description={rocket.description}
           image={rocket.flickr_images}
+          reserved={rocket.reserved}
         />
       ))}
     </ul>
