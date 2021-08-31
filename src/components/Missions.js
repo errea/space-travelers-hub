@@ -6,7 +6,7 @@ const Mission = () => {
   const dispatch = useDispatch();
   const missionData = useSelector((state) => state.missionReducer);
   useEffect(() => {
-    dispatch(retrieveInfo([]));
+    dispatch(getInfo([]));
   }, []);
 
   const handleMissionStateClick = (key, status) => {

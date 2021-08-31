@@ -17,7 +17,7 @@ const updateState = (payload) => ({
   payload,
 });
 // -------------- Reducer ----------------------------
-const missionReducer = (state = initialState, action) => {
+const missionsReducer = (state = initialState, action) => {
   const payloadHolder = action.payload;
   const stateHolder = state;
   const stateArray = [];
@@ -71,7 +71,7 @@ const updateMissionStateMiddleware = (store) => (next) => (action) => {
 };
 
 export {
-  missionReducer,
+  missionsReducer,
   getInfo,
   loadFromAPI,
   getMissionsMiddleware,
