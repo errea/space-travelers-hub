@@ -9,6 +9,10 @@ const Rockets = () => {
 
   const rocketsList = useSelector((state) => state.rockets);
 
+  const reserveRocketHandler = (id) => {
+    console.log(id);
+  };
+
   useEffect(() => {
     if (rocketsList.length === 0) {
       dispatch(getRockets());
@@ -20,6 +24,8 @@ const Rockets = () => {
       {rocketsList.map((rocket) => (
         <RocketItem
           key={rocket.id}
+          reserveRocketHandler={reserveRocketHandler}
+          id={rocket.id}
           name={rocket.name}
           description={rocket.description}
           image={rocket.flickr_images}
