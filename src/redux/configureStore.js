@@ -1,7 +1,7 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import logger from 'redux-logger';
 import thunk from 'redux-thunk';
-import { missionReducer, getMissionsMiddleware, updMissStateMiddleware } from './missions/missions';
+import { missionReducer, getMissionsMiddleware, updateMissionStateMiddleware } from './missions/missions';
 
 const rootReducer = combineReducers({
     missions: missiosReducer,
