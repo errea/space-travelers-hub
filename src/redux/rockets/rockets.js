@@ -20,7 +20,14 @@ const getRocketsAction = (payload) => ({
 
 export const getRockets = () => (dispatch) => {
   spaceXAPI.getRockets().then((res) => {
-    dispatch(getRocketsAction(res));
+    dispatch(getRocketsAction(
+      res.map((rocket) => ({
+        id: rocket.id,
+        name: rocket.rocket_name,
+        type: rocket.rocket_type,
+        flickr_images: rocket.flickr_images[0],
+      })),
+    ));
   });
 };
 
