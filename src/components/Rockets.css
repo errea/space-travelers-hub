@@ -1,0 +1,45 @@
+.rockets-list {
+  width: 90%;
+  margin: auto;
+}
+
+.rockets-list li {
+  display: flex;
+  height: 145px;
+  margin: 18px 0;
+}
+
+.rockets-list img {
+  object-fit: cover;
+  width: 180px;
+}
+
+.rocket-info {
+  margin-left: 9px;
+}
+
+.rocket-info h2 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-bottom: 9px;
+}
+
+.rocket-info p {
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  margin-bottom: 9px;
+}
+
+.rocket-info button {
+  border: 1px solid #007bff;
+  border-radius: 3px;
+  background: #007bff;
+  color: #fff;
+  cursor: pointer;
+  padding: 9px;
+}
+
+.rocket-info button:hover {
+  background: #fff;
+  color: #007bff;
+}
