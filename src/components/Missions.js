@@ -1,27 +1,15 @@
 import { React, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getInfo, updateState } from '../redux/missions/missions';
+import { getMissions } from '../redux/missions/missions';
 
 const Mission = () => {
   const dispatch = useDispatch();
-  const missionData = useSelector((state) => state.missionReducer);
+  const missionData = useSelector((state) => state.missions);
   useEffect(() => {
-    dispatch(getInfo([]));
-  }, []);
-
-  const handleMissionStateClick = (key, status) => {
-    if (status) {
-      dispatch(updateState({
-        id: key,
-        value: false,
-      }));
-    } else {
-      dispatch(updateState({
-        id: key,
-        value: true,
-      }));
+    if (missionData.length === 0) {
+      dispatch(getMissions());
     }
-  };
+  }, []);
 
   return (
     <div>
@@ -30,7 +18,6 @@ const Mission = () => {
           <div>{data.mission_name}</div>
           <div>{data.description}</div>
           <div><div>{data.mission_status ? 'Active Member' : 'NOT A MEMBER'}</div></div>
-          <div><button onClick={() => { handleMissionStateClick(data.mission_id, data.mission_status); }} type="button" id="member_btn">{data.mission_status ? 'Leave Mission' : 'Join Mission'}</button></div>
         </div>
       ))}
     </div>

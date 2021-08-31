@@ -6,8 +6,8 @@ import Rockets from './components/Rockets';
 import Missions from './components/Missions';
 
 const App = () => (
-  <Provider store={store}>
-    <BrowserRouter>
+  <BrowserRouter>
+    <Provider store={store}>
       <Header />
       <main>
         <Route exact path="/">
@@ -17,8 +17,8 @@ const App = () => (
           <Missions />
         </Route>
       </main>
-    </BrowserRouter>
-  </Provider>
+    </Provider>
+  </BrowserRouter>
 );
 
 export default App;
