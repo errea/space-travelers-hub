@@ -24,7 +24,7 @@ export const getRockets = () => (dispatch) => {
       res.map((rocket) => ({
         id: rocket.id,
         name: rocket.rocket_name,
-        type: rocket.rocket_type,
+        description: rocket.description,
         flickr_images: rocket.flickr_images[0],
       })),
     ));
