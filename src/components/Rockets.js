@@ -1,6 +1,8 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { getRockets } from '../redux/rockets/rockets';
+import RocketItem from './RocketItem';
+import './Rockets.css';
 
 const Rockets = () => {
   const dispatch = useDispatch();
@@ -14,8 +16,15 @@ const Rockets = () => {
   }, []);
 
   return (
-    <ul>
-      {rocketsList.map((rocket) => <p key={rocket.id}>{rocket.name}</p>)}
+    <ul className="rockets-list">
+      {rocketsList.map((rocket) => (
+        <RocketItem
+          key={rocket.id}
+          name={rocket.name}
+          description={rocket.description}
+          image={rocket.flickr_images}
+        />
+      ))}
     </ul>
   );
 };
