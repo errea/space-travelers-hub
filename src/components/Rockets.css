@@ -43,3 +43,7 @@
   background: #fff;
   color: #007bff;
 }
+
+.rocket-info button:nth-child(4) {
+  margin-left: 9px;
+}
