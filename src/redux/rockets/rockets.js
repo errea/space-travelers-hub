@@ -1,6 +1,7 @@
 import spaceXAPI from '../../api/spaceXAPI';
 
 const GET_ROCKETS = 'spaceX/rockets/GET_ROCKETS';
+const RESERVE_ROCKET = 'spaceX/rockets/RESERVE_ROCKET';
 
 const initialState = [];
 
@@ -8,6 +9,8 @@ const rocketsReducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_ROCKETS:
       return action.payload;
+    case RESERVE_ROCKET:
+      return state;
     default:
       return state;
   }
@@ -30,5 +33,10 @@ export const getRockets = () => (dispatch) => {
     ));
   });
 };
+
+export const reserveRocket = (payload) => ({
+  type: RESERVE_ROCKET,
+  payload,
+});
 
 export default rocketsReducer;

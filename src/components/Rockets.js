@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
-import { getRockets } from '../redux/rockets/rockets';
+import { getRockets, reserveRocket } from '../redux/rockets/rockets';
 import RocketItem from './RocketItem';
 import './Rockets.css';
 
@@ -10,7 +10,7 @@ const Rockets = () => {
   const rocketsList = useSelector((state) => state.rockets);
 
   const reserveRocketHandler = (id) => {
-    console.log(id);
+    dispatch(reserveRocket(id));
   };
 
   useEffect(() => {
