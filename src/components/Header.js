@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import { ReactComponent as Logo } from '../logo.svg';
+import './Header.css';
 
 const Header = () => (
   <header className="main-header">
