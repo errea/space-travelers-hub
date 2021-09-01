@@ -4,6 +4,7 @@ import store from './redux/configureStore';
 import Header from './components/Header';
 import Rockets from './components/Rockets';
 import Missions from './components/Missions';
+import Profile from './components/Profile';
 
 const App = () => (
   <BrowserRouter>
@@ -15,6 +16,9 @@ const App = () => (
         </Route>
         <Route path="/missions">
           <Missions />
+        </Route>
+        <Route path="/profile">
+          <Profile />
         </Route>
       </main>
     </Provider>
