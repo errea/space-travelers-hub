@@ -41,6 +41,7 @@ const Mission = () => {
             id={data.mission_id}
             name={data.mission_name}
             description={data.description}
+            join={data.join}
           />
         ))}
       </tbody>
