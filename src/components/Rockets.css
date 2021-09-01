@@ -24,9 +24,18 @@
   margin-bottom: 9px;
 }
 
+.reserved-badge {
+  border-radius: 3px;
+  background: #18a2b8;
+  color: #fff;
+  font-weight: 700;
+  padding: 3px;
+  margin-right: 6px;
+}
+
 .rocket-info p {
   font-size: 1.2rem;
-  line-height: 1.8rem;
+  line-height: 2rem;
   margin-bottom: 9px;
 }
 
@@ -44,6 +53,13 @@
   color: #007bff;
 }
 
-.rocket-info button:nth-child(4) {
-  margin-left: 9px;
+.rocket-info .cancel-btn {
+  border: 1px solid #545454;
+  background: transparent;
+  color: #545454;
+}
+
+.rocket-info .cancel-btn:hover {
+  background: #545454;
+  color: #fff;
 }
