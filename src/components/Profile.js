@@ -2,7 +2,8 @@ import { useSelector } from 'react-redux';
 import './Profile.css';
 
 const Profile = () => {
-  const rockets = useSelector((state) => state.rockets);
+  const rocketsList = useSelector((state) => state.rockets);
+  const reservedRockets = rocketsList.filter((rocket) => rocket.reserved);
 
   return (
     <div className="profile-container">
@@ -12,7 +13,7 @@ const Profile = () => {
       <div className="reserved">
         <h2>My Rockets</h2>
         <ul>
-          {rockets.map((rocket) => (
+          {reservedRockets.map((rocket) => (
             <li key={rocket.id}>{rocket.name}</li>
           ))}
         </ul>
