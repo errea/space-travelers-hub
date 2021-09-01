@@ -54,11 +54,12 @@
 }
 
 .rocket-info .cancel-btn {
-  background: #fff;
-  color: #007bff;
+  border: 1px solid #545454;
+  background: transparent;
+  color: #545454;
 }
 
 .rocket-info .cancel-btn:hover {
-  background: #007bff;
+  background: #545454;
   color: #fff;
 }
