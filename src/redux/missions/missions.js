@@ -2,6 +2,7 @@ import spaceXAPI from '../../api/spaceXAPI';
 
 const UPDATE_ALL = 'redux/mission/UPDATE_ALL';
 const JOIN_MISSION = 'redux/mission/JOIN_MISSION';
+const LEAVE_MISSION = 'redux/mission/LEAVE_MISSION';
 
 const initialState = [];
 
@@ -29,6 +30,20 @@ const missionsReducer = (state = initialState, action) => {
 
       return newState;
     }
+
+    case LEAVE_MISSION: {
+      const newState = state.map((mission) => {
+        if (mission.mission_id !== action.payload) {
+          return mission;
+        }
+        return {
+          ...mission,
+          reserved: false,
+        };
+      });
+
+      return newState;
+    }
     default:
       return state;
   }
@@ -36,6 +51,11 @@ const missionsReducer = (state = initialState, action) => {
 
 export const joinMissions = (payload) => ({
   type: JOIN_MISSION,
+  payload,
+});
+
+export const leaveMissions = (payload) => ({
+  type: LEAVE_MISSION,
   payload,
 });
 
