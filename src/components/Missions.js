@@ -1,12 +1,17 @@
 import { React, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getMissions } from '../redux/missions/missions';
+import { getMissions, joinMissions } from '../redux/missions/missions';
 import MissionsItem from './MissionsItem';
 import './Missions.css';
 
 const Mission = () => {
   const dispatch = useDispatch();
   const missionData = useSelector((state) => state.missions);
+
+  const joinMissionHandler = (id) => {
+    dispatch(joinMissions(id));
+  };
+
   useEffect(() => {
     if (missionData.length === 0) {
       dispatch(getMissions());
@@ -27,6 +32,7 @@ const Mission = () => {
         {missionData.map((data) => (
           <MissionsItem
             key={data.mission_id}
+            joinMissionHandler={joinMissionHandler}
             id={data.mission_id}
             name={data.mission_name}
             description={data.description}
