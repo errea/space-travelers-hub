@@ -1,7 +1,14 @@
 const MissionsItem = (prop) => {
   const {
-    joinMissionHandler, id, name, description, leaveMissionHandler,
+    joinMissionHandler, id, name, description, join, leaveMissionHandler,
   } = prop;
+
+  let button;
+  if (!join) {
+    button = <button type="button" onClick={() => joinMissionHandler(id)}>Join Mission</button>;
+  } else {
+    button = <button type="button" className="mission-button-join" onClick={() => leaveMissionHandler(id)}>Leave Mission</button>;
+  }
 
   return (
 
@@ -14,12 +21,20 @@ const MissionsItem = (prop) => {
         </span>
       </td>
       <td>
-        <button className="mission-button-join" type="button" onClick={() => joinMissionHandler(id)}>
+
+        <p>
+          {join && (<span className="join-badge">Join Mission</span>)}
+          {description}
+        </p>
+        {button}
+        {/* <button className="mission-button-join"
+        type="button" onClick={() => joinMissionHandler(id)}>
           Join Mission
         </button>
-        <button className="mission-button-join" type="button" onClick={() => leaveMissionHandler(id)}>
+        <button className="mission-button-join"
+        type="button" onClick={() => leaveMissionHandler(id)}>
           Leave Mission
-        </button>
+        </button> */}
       </td>
     </tr>
 
