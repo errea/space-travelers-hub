@@ -6,6 +6,7 @@
 
 .profile-container h2 {
   font-size: 2.7rem;
+  margin-bottom: 12px;
 }
 
 .reserved {
@@ -14,4 +15,15 @@
 
 .reserved ul {
   list-style: none;
+}
+
+.reserved li {
+  border: 1px solid #ccc;
+  border-bottom: none;
+  font-size: 1.5rem;
+  padding: 24px 18px;
+}
+
+.reserved li:nth-last-child(1) {
+  border-bottom: 1px solid #ccc;
 }
