@@ -60,12 +60,12 @@ $ npm run build # Builds the app for production to the `build` folder.
 
 ** Eri Okereafor **
 - GitHub - [@errea](https://github.com/errea)
-- Twitter - [@Erreakay]()
+- Twitter - [@Erreakay](https://twitter.com/Erreakay)
 - LinkedIn - [Eri Okereafor](https://www.linkedin.com/in/eri-ngozi-okereafor/)
 
 ** Alonso Falconi **
 - GitHub - [@alonsofl](https://github.com/alonsofl)
-- Twitter - [@alonsofalconi](https://www.twitter.com/alonsofalconi)
+- Twitter - [@AlonsoFalconi](https://www.twitter.com/AlonsoFalconi)
 - LinkedIn - [Alonso Falconi](https://www.linkedin.com/in/alonsofalconi/)
 
 Give a ⭐️ if you like this project!
