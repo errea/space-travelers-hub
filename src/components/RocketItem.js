@@ -1,6 +1,7 @@
 const RocketItem = (prop) => {
   const {
     reserveRocketHandler,
+    cancelReservationHandler,
     id,
     name,
     description,
@@ -15,6 +16,9 @@ const RocketItem = (prop) => {
         <p>{description}</p>
         <button type="button" onClick={() => reserveRocketHandler(id)}>
           Reserve Rocket
+        </button>
+        <button type="button" onClick={() => cancelReservationHandler(id)}>
+          Cancel Reservation
         </button>
       </div>
     </li>

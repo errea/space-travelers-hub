@@ -2,6 +2,7 @@ import spaceXAPI from '../../api/spaceXAPI';
 
 const GET_ROCKETS = 'spaceX/rockets/GET_ROCKETS';
 const RESERVE_ROCKET = 'spaceX/rockets/RESERVE_ROCKET';
+const CANCEL_RESERVATION = 'spaceX/rockets/CANCEL_RESERVATION';
 
 const initialState = [];
 
@@ -17,6 +18,19 @@ const rocketsReducer = (state = initialState, action) => {
         return {
           ...rocket,
           reserved: true,
+        };
+      });
+
+      return newState;
+    }
+    case CANCEL_RESERVATION: {
+      const newState = state.map((rocket) => {
+        if (rocket.id !== action.payload) {
+          return rocket;
+        }
+        return {
+          ...rocket,
+          reserved: false,
         };
       });
 
@@ -47,6 +61,11 @@ export const getRockets = () => (dispatch) => {
 
 export const reserveRocket = (payload) => ({
   type: RESERVE_ROCKET,
+  payload,
+});
+
+export const cancelReservation = (payload) => ({
+  type: CANCEL_RESERVATION,
   payload,
 });
 
