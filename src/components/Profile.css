@@ -1,0 +1,17 @@
+.profile-container {
+  display: flex;
+  width: 90%;
+  margin: 18px auto;
+}
+
+.profile-container h2 {
+  font-size: 2.7rem;
+}
+
+.reserved {
+  width: 50%;
+}
+
+.reserved ul {
+  list-style: none;
+}
