@@ -53,6 +53,12 @@
   color: #007bff;
 }
 
-.rocket-info button:nth-child(4) {
-  margin-left: 9px;
+.rocket-info .cancel-btn {
+  background: #fff;
+  color: #007bff;
+}
+
+.rocket-info .cancel-btn:hover {
+  background: #007bff;
+  color: #fff;
 }
