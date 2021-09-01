@@ -1,6 +1,6 @@
 import { React, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getMissions, joinMissions } from '../redux/missions/missions';
+import { getMissions, joinMissions, leaveMissions } from '../redux/missions/missions';
 import MissionsItem from './MissionsItem';
 import './Missions.css';
 
@@ -10,6 +10,10 @@ const Mission = () => {
 
   const joinMissionHandler = (id) => {
     dispatch(joinMissions(id));
+  };
+
+  const leaveMissionHandler = (id) => {
+    dispatch(leaveMissions(id));
   };
 
   useEffect(() => {
@@ -33,6 +37,7 @@ const Mission = () => {
           <MissionsItem
             key={data.mission_id}
             joinMissionHandler={joinMissionHandler}
+            leaveMissionHandler={leaveMissionHandler}
             id={data.mission_id}
             name={data.mission_name}
             description={data.description}
