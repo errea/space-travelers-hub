@@ -1,0 +1,44 @@
+.main-header {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  padding: 18px 5%;
+}
+
+.logo-img {
+  width: 48px;
+  height: 48px;
+  margin-right: 12px;
+}
+
+.logo-text {
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+.main-nav {
+  margin-left: auto;
+}
+
+.main-nav ul {
+  list-style: none;
+}
+
+.main-nav li {
+  display: inline-block;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #36b;
+  font-size: 1.5rem;
+  margin: 9px;
+}
+
+.main-nav span {
+  font-size: 1.5rem;
+}
+
+.active {
+  border-bottom: 1px solid #36b;
+}
